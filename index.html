@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Valentine</title>
+    <meta name="description" content="A special Valentine's request made with love and 3D magic.">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <div id="canvas-container" aria-hidden="true"></div>
+    <main id="overlay">
+        <h1 id="title">Will you be my Valentine?</h1>
+        <div class="buttons">
+            <button id="yes-btn">Yes, absolutely!</button>
+            <button id="no-btn">No</button>
+        </div>
+        <div id="bouquet-container" class="hidden">
+            <svg width="200" height="200" viewBox="0 0 200 200" style="overflow: visible;">
+                <defs>
+                    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+                        <feMerge>
+                            <feMergeNode in="coloredBlur" />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                </defs>
+                <g filter="url(#glow)">
+                    <!-- Stems -->
+                    <path d="M100,180 Q90,140 70,100" stroke="#4CAF50" stroke-width="4" fill="none" />
+                    <path d="M100,180 Q100,140 100,90" stroke="#4CAF50" stroke-width="4" fill="none" />
+                    <path d="M100,180 Q110,140 130,100" stroke="#4CAF50" stroke-width="4" fill="none" />
+
+                    <!-- Flower Left -->
+                    <g transform="translate(70,100)">
+                        <circle r="20" fill="#fff" stroke="#f0f0f0" stroke-width="1" />
+                        <circle r="5" fill="#FFEB3B" />
+                        <g stroke="#fff" stroke-width="8" stroke-linecap="round">
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(0)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(45)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(90)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(135)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(180)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(225)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(270)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(315)" />
+                        </g>
+                        <circle r="6" fill="#FFC107" />
+                    </g>
+
+                    <!-- Flower Center -->
+                    <g transform="translate(100,90) scale(1.2)">
+                        <circle r="20" fill="#fff" stroke="#f0f0f0" stroke-width="1" />
+                        <g stroke="#fff" stroke-width="8" stroke-linecap="round">
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(0)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(30)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(60)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(90)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(120)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(150)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(180)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(210)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(240)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(270)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(300)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(330)" />
+                        </g>
+                        <circle r="6" fill="#FFC107" />
+                    </g>
+
+                    <!-- Flower Right -->
+                    <g transform="translate(130,100)">
+                        <circle r="20" fill="#fff" stroke="#f0f0f0" stroke-width="1" />
+                        <g stroke="#fff" stroke-width="8" stroke-linecap="round">
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(0)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(45)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(90)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(135)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(180)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(225)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(270)" />
+                            <line x1="0" y1="0" x2="0" y2="-22" transform="rotate(315)" />
+                        </g>
+                        <circle r="6" fill="#FFC107" />
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
